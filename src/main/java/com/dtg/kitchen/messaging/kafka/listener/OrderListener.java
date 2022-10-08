@@ -28,7 +28,7 @@ public class OrderListener {
                 record.partition(), record.timestamp());
         //Use Message object to get additional information
         MessageHeaders headers = message.getHeaders();
-        log.info("Received from partition {} with timestamp {}",
+        log.info("MessageHeaders: Received from partition {} with timestamp {}",
                 headers.get(KafkaHeaders.RECEIVED_PARTITION_ID),
                 headers.get(KafkaHeaders.RECEIVED_TIMESTAMP));
         ui.displayOrder(order);
